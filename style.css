@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Poppins:wght@100;200;300;600;700&family=Source+Code+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Source Code Pro', monospace;
+}
+body{
+    height: 100vh;
+    background-color: rgb(235, 153, 206);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    background-color: rgb(120, 12, 156);
+    max-width: 450px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 30px;
+    border-radius: 15px;
+    user-select: none;
+
+
+}
+.display_area{
+    width: 100%;
+    margin: 3vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, minmax(40px , auto));
+    word-wrap: break-word;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(48, 22, 78, 0.33);
+}
+.display_area .currentInput{
+    text-align: right;
+    height: 8vh;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2;
+    word-wrap: break-word;
+}
+.display_area .answerScreen{
+    text-align: right;
+    color: #fff;
+    height: 10px;
+    line-height: 3;
+    font-size: 1.2rem;
+
+}
+.keypad_buttons{
+    display: grid;
+    grid: repeat(5, 70px) / repeat(4, 70px);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+.keypad_buttons button{
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(226, 166, 246);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.keypad_buttons .sym_btn{
+    background-color: rgb(208, 72, 199);
+    font-weight: 500;
+}
+.keypad_buttons .sym_btn:hover{
+    opacity: 0.9;
+}
+.keypad_buttons .num_btn:hover{
+    background-color:rgb(167, 98, 190);
+}
+@media screen and(max-width: 570px) {
+    body{
+        align-items: flex-start;
+    }
+    .container{
+        overflow:hidden ;
+    }
+}
